@@ -1,1 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperchoqueCar | Carros Elétricos de Alta Performance</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones do FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
 
+    <!-- BARRA DE ACESSIBILIDADE FIXA -->
+    <div class="accessibility-bar" role="region" aria-label="Barra de Acessibilidade">
+        <div class="acc-container">
+            <span class="acc-label"><i class="fas fa-universal-access"></i> Acessibilidade:</span>
+            <!-- Troca de Tema -->
+            <button id="toggle-theme" title="Alternar entre modo escuro e claro">
+                <i class="fas fa-moon"></i> Modo Claro/Escuro
+            </button>
+            <!-- Tamanho da Fonte -->
+            <button id="increase-font" title="Aumentar o tamanho da fonte">A+</button>
+            <button id="reset-font" title="Tamanho de fonte normal">A</button>
+            <button id="decrease-font" title="Diminuir o tamanho da fonte">A-</button>
+            <!-- Recurso para Surdos -->
+            <button id="libras-btn" class="highlight-btn" title="Ativar Tradutor de LIBRAS">
+                <i class="fas fa-hands-asl-interpreting"></i> Atendimento em LIBRAS
+            </button>
+        </div>
+    </div>
+
+    <!-- CABEÇALHO DA LOJA -->
+    <header class="main-header">
+        <div class="logo">
+            <i class="fas fa-bolt logo-icon"></i>
+            <h1>SUPERCHOQUE<span>CAR</span></h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#midia">Fotos e Vídeo</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="header-contact">
+            <a href="tel:08007778080" class="phone-link"><i class="fas fa-phone"></i> (11) 4004-8080</a>
+        </div>
+    </header>
+
+    <!-- BANNER HERO -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="badge-accent">Linha 100% Elétrica</span>
+            <h2>Acelere para o futuro sem emitir poluentes.</h2>
+            <p>Modelos com alta autonomia, tecnologia autônoma e carregamento super-rápido.</p>
+            <div class="hero-btns">
+                <a href="#catalogo" class="btn btn-yellow">Ver Modelos</a>
+                <a href="#contato" class="btn btn-blue">Atendimento Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE DESTAQUES (MAIS VENDIDOS E NOVOS MODELOS) -->
+    <section id="destaques" class="section-container">
+        <h2 class="section-title">Em Destaque na Loja</h2>
+        <div class="highlight-grid">
+            
+            <div class="highlight-card new-model">
+                <div class="card-tag tag-blue"><i class="fas fa-sparkles"></i> Lançamento 2026</div>
+                <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=600&q=80" alt="Novo Carro Elétrico Sedan Azul">
+                <h3>Superchoque Neon GT</h3>
+                <p class="price">R$ 389.900,00</p>
+                <p class="info">Novo motor elétrico duplo com 600cv e até 650km de autonomia.</p>
+            </div>
+
+            <div class="highlight-card best-seller">
+                <div class="card-tag tag-yellow"><i class="fas fa-fire"></i> Mais Comprado</div>
+                <img src="https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=600&q=80" alt="Carro Elétrico Moderno Esportivo Prata">
+                <h3>Superchoque Pulse Urban</h3>
+                <p class="price">R$ 189.900,00</p>
+                <p class="info">O elétrico compacto mais vendido da categoria. Perfeito para a cidade.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CATÁLOGO COMPLETO COM FILTRO -->
+    <section id="catalogo" class="section-container catalog-bg">
+        <h2 class="section-title">Nosso Catálogo</h2>
+        
+        <!-- BARRA DE FILTRO -->
+        <div class="filter-box">
+            <span class="filter-title"><i class="fas fa-filter"></i> Filtrar Veículos:</span>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="mais-comprados">Mais Comprados</button>
+                <button class="filter-btn" data-filter="novos">Novos Modelos</button>
+                <button class="filter-btn" data-filter="suv">SUVs</button>
+            </div>
+        </div>
+
+        <!-- LISTA DE VEÍCULOS -->
+        <div class="car-grid">
+            
+            <!-- Carro 1 -->
+            <article class="car-card" data-category="novos suv">
+                <div class="card-badge badge-blue">Novo Modelo</div>
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=500&q=80" alt="SUV Elétrico Preto em exposição">
+                <div class="car-body">
+                    <h3>Superchoque Terra SUV</h3>
+                    <p class="car-price">R$ 420.000</p>
+                    <ul class="specs-list">
+                        <li><i class="fas fa-battery-full"></i> Autonomia: 580 km</li>
+                        <li><i class="fas fa-tachometer-alt"></i> 0-100 km/h: 3.9s</li>
+                        <li><i class="fas fa-charging-station"></i> Carga rápida: 20 min</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Carro 2 -->
+            <article class="car-card" data-category="mais-comprados">
+                <div class="card-badge badge-yellow">Mais Comprado</div>
+                <img src="https://images.unsplash.com/photo-1541348263662-e082662dc324?auto=format&fit=crop&w=500&q=80" alt="Carro Elétrico de Passeio Amarelo Esportivo">
+                <div class="car-body">
+                    <h3>Superchoque Volt S</h3>
+                    <p class="car-price">R$ 245.000</p>
+                    <ul class="specs-list">
+                        <li><i class="fas fa-battery-full"></i> Autonomia: 450 km</li>
+                        <li><i class="fas fa-tachometer-alt"></i> 0-100 km/h: 4.5s</li>
+                        <li><i class="fas fa-charging-station"></i> Carga rápida: 30 min</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Carro 3 -->
+            <article class="car-card" data-category="mais-comprados suv">
+                <div class="card-badge badge-yellow">Mais Comprado</div>
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=500&q=80" alt="Carro elétrico executivo preto">
+                <div class="car-body">
+                    <h3>Superchoque Exec Crossover</h3>
+                    <p class="car-price">R$ 310.000</p>
+                    <ul class="specs-list">
+                        <li><i class="fas fa-battery-full"></i> Autonomia: 500 km</li>
+                        <li><i class="fas fa-tachometer-alt"></i> 0-100 km/h: 4.1s</li>
+                        <li><i class="fas fa-charging-station"></i> Carga rápida: 25 min</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Carro 4 -->
+            <article class="car-card" data-category="novos">
+                <div class="card-badge badge-blue">Novo Modelo</div>
+                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=500&q=80" alt="Supercarro Elétrico de luxo cor chumbo">
+                <div class="car-body">
+                    <h3>Superchoque Hyper-X</h3>
+                    <p class="car-price">R$ 690.000</p>
+                    <ul class="specs-list">
+                        <li><i class="fas fa-battery-full"></i> Autonomia: 700 km</li>
+                        <li><i class="fas fa-tachometer-alt"></i> 0-100 km/h: 2.1s</li>
+                        <li><i class="fas fa-charging-station"></i> Carga rápida: 15 min</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- GALERIA DE FOTOS E VÍDEOS -->
+    <section id="midia" class="section-container">
+        <h2 class="section-title">Galeria de Fotos e Vídeos</h2>
+        <div class="media-layout">
+            <div class="video-box">
+                <h3>Apresentação Oficial SuperchoqueCar</h3>
+                <!-- Vídeo demonstrativo -->
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Promocional SuperchoqueCar" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="photo-gallery">
+                <h3>Nossos Carregadores e Showroom</h3>
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=300&q=80" alt="Estação de Carregamento Rápido">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=300&q=80" alt="Interior Luxuoso de Veículo Elétrico">
+                    <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=300&q=80" alt="Carro elétrico esportivo no Showroom">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=300&q=80" alt="Carro elétrico moderno rodando na cidade">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVALIAÇÕES DE COMPRADORES -->
+    <section id="avaliacoes" class="section-container reviews-bg">
+        <h2 class="section-title">Avaliação dos Nossos Clientes</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="review-text">"Comprei o Superchoque Pulse Urban. A entrega foi super rápida e o atendimento visual e por LIBRAS me deu total autonomia para tirar minhas dúvidas na loja!"</p>
+                <div class="reviewer-info">
+                    <strong>- Lucas Andrade</strong>
+                    <span>Proprietário do Pulse Urban</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="review-text">"A autonomia do Terra SUV é fantástica! Viajo direto do interior até a capital sem precisar parar para recarregar."</p>
+                <div class="reviewer-info">
+                    <strong>- Beatriz Fernandes</strong>
+                    <span>Proprietária do Terra SUV</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="review-text">"O suporte online respondeu todas as minhas perguntas via chat muito rápido. Excelência no atendimento e os carros são surreais!"</p>
+                <div class="reviewer-info">
+                    <strong>- Marcelo Silva</strong>
+                    <span>Proprietário do Volt S</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATENDIMENTO ONLINE E LOCALIZAÇÃO DA LOJA -->
+    <section id="contato" class="section-container">
+        <h2 class="section-title">Atendimento & Localização</h2>
+        <div class="contact-grid">
+            
+            <!-- Atendimento On-line -->
+            <div class="contact-card">
+                <h3><i class="fas fa-headset"></i> Atendimento On-line</h3>
+                <p>Nossa equipe de especialista está pronta para atendê-lo. Temos suporte em Língua Brasileira de Sinais (LIBRAS) e atendimento via texto totalmente acessível para surdos.</p>
+                <div class="store-details">
+                    <p><strong><i class="fas fa-phone-alt"></i> Telefone / WhatsApp:</strong> (11) 98888-7777</p>
+                    <p><strong><i class="fas fa-clock"></i> Horário:</strong> Seg. a Sáb. - 08:00 às 20:00</p>
+                </div>
+                <button class="btn btn-yellow btn-block" id="start-chat-btn">
+                    <i class="fas fa-comments"></i> Iniciar Chat Online
+                </button>
+            </div>
+
+            <!-- Localização Física -->
+            <div class="contact-card">
+                <h3><i class="fas fa-map-marked-alt"></i> Nossa Loja Física</h3>
+                <p>Venha nos visitar e agende um Test-Drive 100% silencioso e potente.</p>
+                <p><strong>Endereço:</strong> Av. das Nações Unidas, 12000 - Brooklin, São Paulo - SP</p>
+                <div class="map-box">
+                    <!-- Mapa Embutido do Google Maps -->
+                    <iframe src="https://maps.google.com/maps?q=Av.%20das%20Na%C3%A7%C3%B5es%20Unidas%20Sao%20Paulo&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CAIXA DE CHAT VIRTUAL MODAL (Simulação de Atendimento On-line Acessível) -->
+    <div id="chat-modal" class="chat-modal hidden">
+        <div class="chat-header">
+            <h4><i class="fas fa-comments"></i> Atendimento On-line - SuperchoqueCar</h4>
+            <button id="close-chat" aria-label="Fechar Atendimento">&times;</button>
+        </div>
+        <!-- Indicador de Inclusão para Pessoas Surdas -->
+        <div class="deaf-support-notice">
+            <i class="fas fa-deaf"></i> Atendimento adaptado com respostas por texto em tempo real e intérprete de LIBRAS disponível.
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg system">Atendente: Olá! Seja bem-vindo à SuperchoqueCar. Como podemos te ajudar a escolher seu novo carro elétrico hoje?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Digite sua mensagem aqui...">
+            <button id="send-chat-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 SuperchoqueCar. Todos os direitos reservados. Mobilidade sustentável para todos.</p>
+        </div>
+    </footer>
+
+    <!-- WIDGET VLIBRAS (Integração Oficial do Governo Federal para Acessibilidade em LIBRAS) -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="script.js"></script>
